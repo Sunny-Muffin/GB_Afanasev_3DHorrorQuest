@@ -10,23 +10,24 @@ public class HealthManager : MonoBehaviour
     [SerializeField] private float deathTime;
 
     [SerializeField] private GameObject explosionPrefab;
-    [SerializeField] private Scrollbar scrollbar;
+    [SerializeField] private Slider slider;
 
     private void Awake()
     {
         curHealth = maxHealth;
-        if (scrollbar)
+        if (slider)
         {
-            scrollbar.size = curHealth / maxHealth;
+            slider.maxValue = maxHealth;
+            slider.value = curHealth;
         }
     }
 
     public void Hit(float damage)
     {
         curHealth -= damage;
-        if (scrollbar)
+        if (slider)
         {
-            scrollbar.size = curHealth / maxHealth;
+            slider.value = curHealth;
         }
         if (curHealth <= 0)
         {
@@ -56,5 +57,21 @@ public class HealthManager : MonoBehaviour
     public void AddHealth(float plusHP)
     {
         curHealth += plusHP;
+        if (slider)
+        {
+            slider.value = curHealth;
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Hit(10);
+        }
+        if (Input.GetButtonDown("Fire2"))
+        {
+            AddHealth(10);
+        }
     }
 }
