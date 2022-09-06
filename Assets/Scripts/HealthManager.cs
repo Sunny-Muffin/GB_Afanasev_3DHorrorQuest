@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -60,18 +59,6 @@ public class HealthManager : MonoBehaviour
         if (slider)
         {
             slider.value = curHealth;
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Hit(10);
-        }
-        if (Input.GetButtonDown("Fire2"))
-        {
-            AddHealth(10);
         }
     }
 }
