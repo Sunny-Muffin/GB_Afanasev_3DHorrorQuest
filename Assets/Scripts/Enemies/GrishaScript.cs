@@ -1,8 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyScript : MonoBehaviour
+public class GrishaScript : MonoBehaviour
 {
     private Animator animator;
     private int state = 0;
@@ -14,7 +12,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (TryGetComponent(out animator))
         {
-            Debug.Log("Found animator!");
+            //Debug.Log("Found animator!");
         }
     }
 
@@ -28,7 +26,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player entered!");
+            //Debug.Log("Player entered!");
             state = 1;
             transform.LookAt(other.transform);
             animator.SetInteger(stateName, state);
@@ -39,7 +37,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player exited!");
+            //Debug.Log("Player exited!");
             state = 0;
             animator.SetInteger(stateName, state);
         }

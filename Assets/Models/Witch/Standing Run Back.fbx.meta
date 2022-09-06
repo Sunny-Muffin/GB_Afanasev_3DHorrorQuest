@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 91a85dd6ef844e048a39c28961260b31
+guid: 2e3922c41337acc4dab3b30d33bab5af
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: WitchTransit
+    second: WitchBack
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -36,11 +36,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: WitchTransit
+      name: WitchBack
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 35
+      lastFrame: 19
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
