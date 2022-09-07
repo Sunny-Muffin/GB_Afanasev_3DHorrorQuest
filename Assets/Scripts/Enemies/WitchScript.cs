@@ -3,9 +3,6 @@ using UnityEngine;
 public class WitchScript : MonoBehaviour
 {
     private Animator animator;
-    private int state = 0;
-    private string stateName = "GrishaAnimParam";
-
 
     // Start is called before the first frame update
     void Start()

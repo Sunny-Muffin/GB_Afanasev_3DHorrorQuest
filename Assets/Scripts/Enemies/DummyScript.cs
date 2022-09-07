@@ -37,7 +37,8 @@ public class DummyScript : MonoBehaviour
     IEnumerator PlayAnim()
     {
         animator.SetBool(stateName, true);
-        yield return new WaitForSeconds (1);
-        // make ragdoll fall
+        yield return new WaitForSeconds (2);
+        animator.enabled = false;
+        Debug.Log("Coroutine finished");
     }
 }
