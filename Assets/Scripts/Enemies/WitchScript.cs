@@ -12,7 +12,7 @@ public class WitchScript : MonoBehaviour
     {
         if (TryGetComponent(out animator))
         {
-            Debug.Log("Witch has animator!");
+            //Debug.Log("Witch has animator!");
         }
     }
 
@@ -21,23 +21,28 @@ public class WitchScript : MonoBehaviour
     {
         if (Input.GetKey("w"))
         {
-            Debug.Log("w");
+            //Debug.Log("w");
             animator.SetFloat("VelocityY", 1);
         }
-        if (Input.GetKey("s"))
+        else if (Input.GetKey("s"))
         {
-            Debug.Log("s");
+            //Debug.Log("s");
             animator.SetFloat("VelocityY", -1);
         }
-        if (Input.GetKey("d"))
+        else if (Input.GetKey("d"))
         {
-            Debug.Log("d");
+            //Debug.Log("d");
             animator.SetFloat("VelocityX", 1);
         }
-        if (Input.GetKey("a"))
+        else if (Input.GetKey("a"))
         {
-            Debug.Log("a");
+            //Debug.Log("a");
             animator.SetFloat("VelocityX", -1);
+        }
+        else
+        {
+            animator.SetFloat("VelocityX", 0);
+            animator.SetFloat("VelocityY", 0);
         }
     }
 }
